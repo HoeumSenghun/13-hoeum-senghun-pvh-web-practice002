@@ -7,8 +7,52 @@
     <link rel="stylesheet" href="./styles/input.css">
     <link rel="stylesheet" href="./styles/output.css">
 </head>
-<body>
-    
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <div class="container mx-auto p-8">
+        <h1 class="text-2xl font-bold mb-4 text-center">Quotes</h1>
+        <div class="flex space-x-4 mb-4">
+            <select id="searchOption" onchange="toggleSearchInput()" class="border p-2 rounded-lg">
+                <option value="">Choose an option</option>
+                <option value="id">Quote's Id</option>
+                <option value="title">Quote's Title</option>
+            </select>
+
+            <input type="text" id="searchInput" placeholder="search" disabled class="border p-2 rounded-lg flex-1 disabled:opacity-50">
+            <button id="searchButton" onclick="searchQuote()" disabled class="bg-green-800 text-white px-4 py-2 rounded-lg disabled:opacity-50">Search</button>
+        </div>
+
+        <h2 class="text-xl font-semibold mb-2">Quote List</h2>
+        <div id="quoteDisplay" class="p-4 rounded">
+            <div class="quote" data-id="1" data-title="It's okay">
+                <div class="flex items-start space-x-4 mb-4">
+                    <img src="./images/image-1.jpg" alt="Quote Image" class="w-40 h-60 object-cover rounded-xl">
+                    <div>
+                        <h3 class="text-lg font-bold">It's okay</h3>
+                        <p class="text-gray-700">It's okay if you don't know what it will look like at the TOP. Take it ONE STEP at a time.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="quote" data-id="2" data-title="Believe">
+                <div class="flex items-start space-x-4 mb-4">
+                    <img src="./images/image-2.jpg" alt="Quote Image" class="w-40 h-60 object-cover rounded-xl">
+                    <div>
+                        <h3 class="text-lg font-bold">Believe</h3>
+                        <p class="text-gray-700">Believe in yourself! Have faith in your abilities! Without a humble but reasonable confidence in your own powers you cannot be successful or happy.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="quote" data-id="3" data-title="Dream Big">
+                <div class="flex items-start space-x-4 mb-4">
+                    <img src="./images/image-3.jpg" alt="Quote Image" class="w-40 h-60 object-cover rounded-xl">
+                    <div>
+                        <h3 class="text-lg font-bold">Dream Big</h3>
+                        <p class="text-gray-700">A dream doesn't become reality through magic; it takes sweat, determination and hard work.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="./js/script.js"></script>
 </body>
